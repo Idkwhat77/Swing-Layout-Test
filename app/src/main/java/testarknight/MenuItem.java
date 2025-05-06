@@ -1,7 +1,6 @@
 package testarknight;
 
 import java.awt.*;
-
 import javax.swing.*;
 
 public class MenuItem extends JButton {
