@@ -8,7 +8,7 @@ public class Sidebar extends JPanel {
     // Constructor for the splitpane sidebar
     public Sidebar() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        setBackground(Color.DARK_GRAY);
+        setBackground(Color.decode("#2D2D2D"));
         setBorder(BorderFactory.createEmptyBorder(1,10,1,10));
         add(Box.createVerticalStrut(10));
         add(new SidebarButtons("Home"));

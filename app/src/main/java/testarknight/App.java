@@ -30,26 +30,9 @@ public class App extends JFrame {
         JSplitPane splitPane = new JSplitPane();    
         splitPane.setDividerLocation(240);
         splitPane.setLeftComponent(new Sidebar());
-        splitPane.setRightComponent(scrollPane); 
-        splitPane.setDividerSize(10); // Make it 1 pixel thin
-
-        // Custom UI to make it invisible
-        splitPane.setUI(new BasicSplitPaneUI() {
-            @Override
-            public BasicSplitPaneDivider createDefaultDivider() {
-                return new BasicSplitPaneDivider(this) {
-                    @Override
-                    public void setBorder(Border b) {
-                        // No border
-                    }
-
-                    @Override
-                    public void paint(Graphics g) {
-                        // Don't draw anything—fully invisible
-                    }
-                };
-            }
-        });
+        splitPane.setRightComponent(scrollPane);
+        splitPane.setBorder(null); // Remove ugly thin blue line around the panel
+        splitPane.setDividerSize(10); // Set the divider size by pixel
     
         // Navbar on the top
         add(new Navbar(), BorderLayout.NORTH);
