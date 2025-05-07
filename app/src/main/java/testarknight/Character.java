@@ -3,7 +3,7 @@ package testarknight;
 import java.awt.*;
 import javax.swing.*;
 
-public class Character extends JPanel {
+public class Character extends JButton {
     
     public Character(String charName, String charImageDir) {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -16,6 +16,7 @@ public class Character extends JPanel {
         charName2.setAlignmentX(CENTER_ALIGNMENT);
         add(charImage);
         add(charName2);
+        addActionListener(new ButtonOnClick(this));
     }
 }
 

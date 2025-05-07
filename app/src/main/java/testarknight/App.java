@@ -6,6 +6,9 @@ package testarknight;
 
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.plaf.basic.BasicSplitPaneDivider;
+import javax.swing.plaf.basic.BasicSplitPaneUI;
 
 public class App extends JFrame {
 
@@ -28,7 +31,25 @@ public class App extends JFrame {
         splitPane.setDividerLocation(240);
         splitPane.setLeftComponent(new Sidebar());
         splitPane.setRightComponent(scrollPane); 
-        splitPane.setBorder(null);
+        splitPane.setDividerSize(10); // Make it 1 pixel thin
+
+        // Custom UI to make it invisible
+        splitPane.setUI(new BasicSplitPaneUI() {
+            @Override
+            public BasicSplitPaneDivider createDefaultDivider() {
+                return new BasicSplitPaneDivider(this) {
+                    @Override
+                    public void setBorder(Border b) {
+                        // No border
+                    }
+
+                    @Override
+                    public void paint(Graphics g) {
+                        // Don't draw anything—fully invisible
+                    }
+                };
+            }
+        });
     
         // Navbar on the top
         add(new Navbar(), BorderLayout.NORTH);

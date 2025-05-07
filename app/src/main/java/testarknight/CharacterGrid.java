@@ -18,6 +18,7 @@ public class CharacterGrid extends JPanel {
         add(new Character("Anaxa", "/anaxa.png"));
         add(new Character("Archer", "/archer.png"));
         add(new Character("Argenti", "/argenti.png"));
+        add(new Character("Arlan", "/arlan.png"));
         add(new Character("Asta", "/asta.png"));
         add(new Character("Aventurine", "/aventurine.png"));
         add(new Character("Bailu", "/bailu.png"));
@@ -26,15 +27,15 @@ public class CharacterGrid extends JPanel {
         add(new Character("Boothill", "/boothill.png"));
         add(new Character("Bronya", "/bronya.png"));
         add(new Character("Castorice", "/castorice.png"));
-        add(new Character("Clara", "/clara.png"));
         add(new Character("Cipher", "/cipher.png"));
+        add(new Character("Clara", "/clara.png"));
         add(new Character("Dan Heng", "/danheng.png"));
         add(new Character("Dan Heng - Imbibitor Lunae", "/danhengil.png"));
         add(new Character("Dr. Ratio", "/drratio.png"));
         add(new Character("Feixiao", "/feixiao.png"));
         add(new Character("Firefly", "/firefly.png"));
-        add(new Character("Fugue", "/fugue.png"));
         add(new Character("Fu Xuan", "/fuxuan.png"));
+        add(new Character("Fugue", "/fugue.png"));
         add(new Character("Gallagher", "/gallagher.png"));
         add(new Character("Gepard", "/gepard.png"));
         add(new Character("Guinaifen", "/guinaifen.png"));
@@ -46,8 +47,8 @@ public class CharacterGrid extends JPanel {
         add(new Character("Hyacine", "/hyacine.png"));
         add(new Character("Jade", "/jade.png"));
         add(new Character("Jiaoqiu", "/jiaoqiu.png"));
-        add(new Character("Jingliu", "/jingliu.png"));
         add(new Character("Jing Yuan", "/jingyuan.png"));
+        add(new Character("Jingliu", "/jingliu.png"));
         add(new Character("Kafka", "/kafka.png"));
         add(new Character("Lingsha", "/lingsha.png"));
         add(new Character("Luka", "/luka.png"));
@@ -60,8 +61,8 @@ public class CharacterGrid extends JPanel {
         add(new Character("Mydei", "/mydei.png"));
         add(new Character("Natasha", "/natasha.png"));
         add(new Character("Pela", "/pela.png"));
-        add(new Character("Qingque", "/qingque.png"));
         add(new Character("Phainon", "/phainon.png"));
+        add(new Character("Qingque", "/qingque.png"));
         add(new Character("Rappa", "/rappa.png"));
         add(new Character("Robin", "/robin.png"));
         add(new Character("Ruan Mei", "/ruanmei.png"));
