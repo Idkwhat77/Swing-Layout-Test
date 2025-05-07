@@ -10,17 +10,27 @@ import javax.swing.*;
 public class App extends JFrame {
 
     public App() {
-        setTitle("Spotify");
+
+        // Set website foundation
+        setTitle("Honkai: Star Rail Characters");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1920, 1080);
         setLayout(new BorderLayout());
     
-        JSplitPane splitPane = new JSplitPane();
+        // Make the Character grid scrollable and the scroll speed faster
+        CharacterGrid charGrid = new CharacterGrid();
+        JScrollPane scrollPane = new JScrollPane(charGrid);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        scrollPane.getVerticalScrollBar().setUnitIncrement(32);
+
+        // Create a panel that can be resized by cursor
+        JSplitPane splitPane = new JSplitPane();    
         splitPane.setDividerLocation(240);
         splitPane.setLeftComponent(new Sidebar());
-        splitPane.setRightComponent(new CharacterGrid()); 
+        splitPane.setRightComponent(scrollPane); 
         splitPane.setBorder(null);
     
+        // Navbar on the top
         add(new Navbar(), BorderLayout.NORTH);
         add(splitPane, BorderLayout.CENTER);
     }
