@@ -3,10 +3,10 @@ package testarknight;
 import java.awt.*;
 import javax.swing.*;
 
-public class CharacterCard extends JButton {
+public class LightconeCard extends JButton {
     
-    // Constructor for the character cards and location directory
-    public CharacterCard(String charName, String charImageDir, String element, int rarity) {
+    // Constructor for the light cone cards and location directory
+    public LightconeCard(String coneName, String coneImageDir, String element, int rarity) {
 
         // Set card foundations
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -15,23 +15,23 @@ public class CharacterCard extends JButton {
         setBorderPainted(false);
 
         // Create objects for the image + scaling, name, and stars rarity
-        ImageIcon originalIcon = new ImageIcon(getClass().getResource(charImageDir));
+        ImageIcon originalIcon = new ImageIcon(getClass().getResource(coneImageDir));
         Image scaledImage = originalIcon.getImage().getScaledInstance(256, 256, Image.SCALE_SMOOTH);
-        JLabel charImage = new JLabel(new ImageIcon(scaledImage));
+        JLabel coneImage = new JLabel(new ImageIcon(scaledImage));
 
-        JLabel charName2 = new JLabel(charName);
+        JLabel coneName2 = new JLabel(coneName);
         JLabel stars = new JLabel();
 
         // Set alignments and sizes for the objects
-        charImage.setAlignmentX(CENTER_ALIGNMENT);
-        charImage.setSize(256, 256);
-        charName2.setFont(new Font("Segoe UI", Font.BOLD, 15));
-        charName2.setForeground(Color.WHITE);
-        charName2.setAlignmentX(CENTER_ALIGNMENT);
+        coneImage.setAlignmentX(CENTER_ALIGNMENT);
+        coneImage.setSize(256, 256);
+        coneName2.setFont(new Font("Segoe UI", Font.BOLD, 15));
+        coneName2.setForeground(Color.WHITE);
+        coneName2.setAlignmentX(CENTER_ALIGNMENT);
         stars.setAlignmentX(CENTER_ALIGNMENT);
         stars.setFont(new Font("Dialog", Font.PLAIN, 20));
 
-        // Creates 4 pretty pointed stars label objects depending on character rarity
+        // Creates 4 pretty pointed stars label objects depending on light cone rarity
         if (rarity == 4) {
             stars.setText("✦✦✦✦");
             stars.setForeground(Color.MAGENTA);
@@ -41,8 +41,8 @@ public class CharacterCard extends JButton {
         }
 
         // Adding all objects to the card layout
-        add(charImage);
-        add(charName2);
+        add(coneImage);
+        add(coneName2);
         add(Box.createVerticalStrut(5));
         add(new CharacterCardElementName(element));
         add(Box.createVerticalStrut(5));

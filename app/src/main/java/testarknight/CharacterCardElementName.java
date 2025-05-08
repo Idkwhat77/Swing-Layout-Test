@@ -3,11 +3,11 @@ package testarknight;
 import java.awt.*;
 import javax.swing.*;
 
-public class ElementName extends JPanel {
+public class CharacterCardElementName extends JPanel {
 
     private String directory;
 
-    public ElementName(String element) {
+    public CharacterCardElementName(String element) {
 
         // Set panel foundation
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));

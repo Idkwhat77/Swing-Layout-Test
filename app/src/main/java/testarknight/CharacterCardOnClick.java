@@ -6,11 +6,11 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class ButtonOnClick implements ActionListener {
+public class CharacterCardOnClick implements ActionListener {
 
     private JButton button;
 
-    public ButtonOnClick(JButton button) {
+    public CharacterCardOnClick(JButton button) {
         this.button = button;
     }
 
