@@ -14,6 +14,7 @@ public class ButtonOnClick implements ActionListener {
         this.button = button;
     }
 
+    // Create one of those error message type boxes when button clicked
     @Override
     public void actionPerformed(ActionEvent e) {
         JOptionPane.showMessageDialog(button, "You clicked the button!");

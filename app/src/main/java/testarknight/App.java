@@ -25,14 +25,15 @@ public class App extends JFrame {
         JScrollPane scrollPane = new JScrollPane(charGrid);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         scrollPane.getVerticalScrollBar().setUnitIncrement(32);
+        scrollPane.setBorder(null); // Remove ugly thin blue line around the panel grr
 
         // Create a panel that can be resized by cursor
         JSplitPane splitPane = new JSplitPane();    
         splitPane.setDividerLocation(240);
         splitPane.setLeftComponent(new Sidebar());
         splitPane.setRightComponent(scrollPane);
-        splitPane.setBorder(null); // Remove ugly thin blue line around the panel
         splitPane.setDividerSize(10); // Set the divider size by pixel
+        splitPane.setBorder(null); // Remove ugly thin blue line around the panel
     
         // Navbar on the top
         add(new Navbar(), BorderLayout.NORTH);
