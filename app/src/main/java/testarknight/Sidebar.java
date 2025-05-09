@@ -25,20 +25,40 @@ public class Sidebar extends JPanel {
         add(lightconeButton);
         lightconeButton.addActionListener(new SidebarButtonsOnClick(splitPane, new LightconeGrid()));
 
-        // Buttons without action listener implemented yet
+        // Sidebar buttons with no target grid yet (character grid is a placeholder)
         add(Box.createVerticalStrut(10));
-        add(new SidebarButtons("Tier List"));
+        SidebarButtons tierListButton = new SidebarButtons("Tier List");
+        add(tierListButton);
+        tierListButton.addActionListener(new SidebarButtonsOnClick(splitPane, new CharacterGrid()));
+
         add(Box.createVerticalStrut(10));
-        add(new SidebarButtons("Memory of Chaos"));
+        SidebarButtons memoryOfChaosButton = new SidebarButtons("Memory of Chaos");
+        add(memoryOfChaosButton);
+        memoryOfChaosButton.addActionListener(new SidebarButtonsOnClick(splitPane, new CharacterGrid()));
+
         add(Box.createVerticalStrut(10));
-        add(new SidebarButtons("Pure Fiction"));
+        SidebarButtons pureFictionButton = new SidebarButtons("Pure Fiction");
+        add(pureFictionButton);
+        pureFictionButton.addActionListener(new SidebarButtonsOnClick(splitPane, new CharacterGrid()));
+
         add(Box.createVerticalStrut(10));
-        add(new SidebarButtons("Apocalyptic Shadows"));
+        SidebarButtons apocalypticShadowsButton = new SidebarButtons("Apocalyptic Shadows");
+        add(apocalypticShadowsButton);
+        apocalypticShadowsButton.addActionListener(new SidebarButtonsOnClick(splitPane, new CharacterGrid()));
+
         add(Box.createVerticalStrut(10));
-        add(new SidebarButtons("Relics"));
+        SidebarButtons relicsButton = new SidebarButtons("Relics");
+        add(relicsButton);
+        relicsButton.addActionListener(new SidebarButtonsOnClick(splitPane, new CharacterGrid()));
+
         add(Box.createVerticalStrut(10));
-        add(new SidebarButtons("Guides"));
+        SidebarButtons guidesButton = new SidebarButtons("Guides");
+        add(guidesButton);
+        guidesButton.addActionListener(new SidebarButtonsOnClick(splitPane, new CharacterGrid()));
+
         add(Box.createVerticalStrut(10));
-        add(new SidebarButtons("Tools"));
+        SidebarButtons toolsButton = new SidebarButtons("Tools");
+        add(toolsButton);
+        toolsButton.addActionListener(new SidebarButtonsOnClick(splitPane, new CharacterGrid()));
     }
 }

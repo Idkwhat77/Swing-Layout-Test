@@ -6,7 +6,7 @@ import javax.swing.*;
 public class LightconeCard extends JButton {
     
     // Constructor for the light cone cards and location directory
-    public LightconeCard(String coneName, String coneImageDir, String element, int rarity) {
+    public LightconeCard(String coneName, String coneImageDir, String path, int rarity) {
 
         // Set card foundations
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -16,7 +16,7 @@ public class LightconeCard extends JButton {
 
         // Create objects for the image + scaling, name, and stars rarity
         ImageIcon originalIcon = new ImageIcon(getClass().getResource(coneImageDir));
-        Image scaledImage = originalIcon.getImage().getScaledInstance(256, 256, Image.SCALE_SMOOTH);
+        Image scaledImage = originalIcon.getImage().getScaledInstance(256, 300, Image.SCALE_SMOOTH);
         JLabel coneImage = new JLabel(new ImageIcon(scaledImage));
 
         JLabel coneName2 = new JLabel(coneName);
@@ -32,10 +32,15 @@ public class LightconeCard extends JButton {
         stars.setFont(new Font("Dialog", Font.PLAIN, 20));
 
         // Creates 4 pretty pointed stars label objects depending on light cone rarity
-        if (rarity == 4) {
+        if (rarity == 3) {
+            stars.setText("✦✦✦");
+            stars.setForeground(Color.WHITE);
+        }
+        else if (rarity == 4) {
             stars.setText("✦✦✦✦");
             stars.setForeground(Color.MAGENTA);
-        } else if (rarity == 5) {
+        } 
+        else if (rarity == 5) {
             stars.setText("✦✦✦✦✦");
             stars.setForeground(Color.YELLOW);
         }
@@ -44,7 +49,7 @@ public class LightconeCard extends JButton {
         add(coneImage);
         add(coneName2);
         add(Box.createVerticalStrut(5));
-        add(new CharacterCardElementName(element));
+        add(new LightconeCardPathName(path));
         add(Box.createVerticalStrut(5));
         add(stars);
 

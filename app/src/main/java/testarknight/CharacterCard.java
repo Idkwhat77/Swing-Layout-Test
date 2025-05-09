@@ -6,7 +6,7 @@ import javax.swing.*;
 public class CharacterCard extends JButton {
     
     // Constructor for the character cards and location directory
-    public CharacterCard(String charName, String charImageDir, String element, int rarity) {
+    public CharacterCard(String charName, String charImageDir, String element, String path, int rarity) {
 
         // Set card foundations
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -46,6 +46,7 @@ public class CharacterCard extends JButton {
         add(Box.createVerticalStrut(5));
         add(new CharacterCardElementName(element));
         add(Box.createVerticalStrut(5));
+        add(new CharacterCardPathName(path));
         add(stars);
 
         // Do an action when card is clicked by mouse

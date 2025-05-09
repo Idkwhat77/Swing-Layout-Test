@@ -17,9 +17,8 @@ public class App extends JFrame {
         // Set website foundation
         setTitle("Honkai: Star Rail Characters");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1920, 1080);
-        setLayout(new BorderLayout());
-    
+        setSize(1536, 864);
+        
         // Make the Character grid scrollable and the scroll speed faster
         CharacterGrid charGrid = new CharacterGrid();
         JScrollPane scrollPane = new JScrollPane(charGrid);
@@ -33,7 +32,6 @@ public class App extends JFrame {
         splitPane.setDividerLocation(240);
         splitPane.setLeftComponent(new Sidebar(splitPane));
         splitPane.setRightComponent(scrollPane);
-        splitPane.setDividerSize(10); // Set the divider size by pixel
         splitPane.setBorder(null); // Remove ugly thin blue line around the panel
     
         // Navbar on the top
